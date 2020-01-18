@@ -1,9 +1,8 @@
 const router = require('express').Router();
-let Mood = require('../models/mood');
+let Mood = require('../models/Mood');
 
 //username passed thorugh /moods/username
 router.route('/:username').get((req, res) => {
-  //find moods by username
   Mood.find({username: req.params.username})
     .then(moods => res.json(moods))
     .catch(err => res.status(400).json('Error: ' + err));

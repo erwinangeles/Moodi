@@ -95,8 +95,7 @@ class Dashboard extends Component {
         console.log({quote})
       })
   }
-
-
+  
 render() {
     const { user } = this.props.auth;
 return (
